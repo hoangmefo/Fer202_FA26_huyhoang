@@ -8,6 +8,14 @@ function Counter() {
     setCount(count + 1)
   }
 
+  const handleDecrement = () => {
+    setCount(count - 1)
+  }
+
+  const handleReset = () => {
+    setCount(0)
+  }
+
   return (
     <div className="card shadow-sm">
       <div className="card-body text-center">
@@ -17,9 +25,19 @@ function Counter() {
           Current count: <strong>{count}</strong>
         </p>
 
-        <Button variant="primary" onClick={handleIncrement}>
-          Increment
-        </Button>
+        <div className="d-flex justify-content-center gap-2">
+          <Button variant="primary" onClick={handleIncrement}>
+            Increase
+          </Button>
+
+          <Button variant="danger" onClick={handleDecrement}>
+            Decrease
+          </Button>
+
+          <Button variant="secondary" onClick={handleReset}>
+            Reset
+          </Button>
+        </div>
       </div>
     </div>
   )
