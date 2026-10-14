@@ -6,21 +6,24 @@ import Home from './pages/Home.jsx'
 import New from './pages/New.jsx'
 import Footer from './components/Footer.jsx'
 import MyCarousel from './components/MyCarousel.jsx'
+import Container from 'react-bootstrap/Container'
+import ProductList from './pages/ProductList.jsx'
 
 function App() {
   return (
     <>
       <Navbar />
       <MyCarousel />
-      <main className="container py-4">
+      <Container as="main" className="py-4">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/new" element={<New />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/products" element={<ProductList />} />
         </Routes>
 
-      </main>
+      </Container>
 
       <Footer />
     </>

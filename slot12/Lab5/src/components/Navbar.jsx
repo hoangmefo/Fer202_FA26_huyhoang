@@ -1,36 +1,33 @@
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 
 const links = [
   { to: '/', label: 'Home', end: true },
   { to: '/about', label: 'About' },
   { to: '/new', label: 'New' },
   { to: '/contact', label: 'Contact' },
+  { to: '/products', label: 'Product' },
 ]
 
-function Navbar() {
+function AppNavbar() {
   return (
-    <nav className="navbar navbar-expand bg-light border-bottom">
-      <div className="container">
-        <NavLink className="navbar-brand" to="/">
-          Lab5
-        </NavLink>
-        <div className="navbar-nav">
-          {links.map(({ to, label, end }) => (
-            <NavLink
-              key={to}
-              to={to}
-              end={end}
-              className={({ isActive }) =>
-                `nav-link${isActive ? ' active' : ''}`
-              }
-            >
-              {label}
-            </NavLink>
-          ))}
-        </div>
-      </div>
-    </nav>
+    <Navbar bg="light" expand="lg" className="border-bottom">
+      <Container>
+        <Navbar.Toggle aria-controls="main-navbar" />
+        <Navbar.Collapse id="main-navbar">
+          <Nav className="me-auto">
+            {links.map(({ to, label, end }) => (
+              <Nav.Link key={to} as={NavLink} to={to} end={end}>
+                {label}
+              </Nav.Link>
+            ))}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 }
 
-export default Navbar
+export default AppNavbar

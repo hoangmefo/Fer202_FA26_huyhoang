@@ -1,4 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel'
+import Image from 'react-bootstrap/Image'
 import banners from '../data/banners.js'
 
 function MyCarousel() {
@@ -6,11 +7,11 @@ function MyCarousel() {
     <Carousel>
       {banners.map((banner) => (
         <Carousel.Item key={banner.id} interval={3000}>
-          <img
-            className="d-block w-100"
+          <Image
+            fluid
             src={banner.image}
             alt={banner.title}
-            style={{ height: '350px', objectFit: 'cover' }}
+            style={{ height: 350, objectFit: 'cover', width: '100%' }}
           />
           <Carousel.Caption>
             <h3>{banner.title}</h3>

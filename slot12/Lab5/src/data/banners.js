@@ -1,25 +1,25 @@
-import holidayFeast from '../assets/banners/holiday-feast.jpg'
-import grilledFeast from '../assets/banners/grilled-feast.jpg'
-import dinnerTable from '../assets/banners/dinner-table.jpg'
+import teamTechnology from '../assets/banners/team-technology.jpg'
+import modernDevices from '../assets/banners/modern-devices.jpg'
+import computerHardware from '../assets/banners/computer-hardware.jpg'
 
 const banners = [
   {
     id: 1,
-    image: holidayFeast,
-    title: 'Bữa tiệc ngày lễ',
-    description: 'Thưởng thức món nướng thơm ngon cùng gia đình và bạn bè.',
+    image: teamTechnology,
+    title: 'Công nghệ cho cuộc sống hiện đại',
+    description: 'Khám phá các thiết bị công nghệ hỗ trợ công việc và học tập.',
   },
   {
     id: 2,
-    image: grilledFeast,
-    title: 'Tiệc nướng sum vầy',
-    description: 'Cùng chia sẻ những món ăn hấp dẫn trong không khí ấm cúng.',
+    image: modernDevices,
+    title: 'Thiết bị thông minh',
+    description: 'Laptop, điện thoại và phụ kiện cho phong cách sống kết nối.',
   },
   {
     id: 3,
-    image: dinnerTable,
-    title: 'Bàn tiệc thịnh soạn',
-    description: 'Khám phá các món ăn ngon cho những dịp đặc biệt.',
+    image: computerHardware,
+    title: 'Sức mạnh phần cứng',
+    description: 'Khám phá linh kiện máy tính và công nghệ bên trong thiết bị.',
   },
 ]
 
