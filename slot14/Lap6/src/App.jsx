@@ -1,28 +1,28 @@
-import AxiosDemo from './components/AxiosDemo.jsx'
-import PostList from './components/PostList.jsx'
-import CreatePost from './components/CreatePost.jsx'
-import UpdatePost from './components/UpdatePost.jsx'
-import PatchPost from './components/PatchPost.jsx'
-import DeletePost from './components/DeletePost.jsx'
-import RequestConfig from './components/RequestConfig.jsx'
+import { Route, Routes } from 'react-router-dom'
+import Layout from './components/Layout.jsx'
+import AxiosDemoPage from './pages/AxiosDemoPage.jsx'
+import HttpRequestsPage from './pages/HttpRequestsPage.jsx'
+import NotFoundPage from './pages/NotFoundPage.jsx'
+import PostCreatePage from './pages/PostCreatePage.jsx'
+import PostDetailPage from './pages/PostDetailPage.jsx'
+import PostEditPage from './pages/PostEditPage.jsx'
+import PostListPage from './pages/PostListPage.jsx'
 
 function App() {
   return (
-    <>
-      <AxiosDemo />
-      <hr />
-      <PostList />
-      <hr />
-      <CreatePost />
-      <hr />
-      <UpdatePost />
-      <hr />
-      <PatchPost />
-      <hr />
-      <DeletePost />
-      <hr />
-      <RequestConfig />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<AxiosDemoPage />} />
+        <Route path="http" element={<HttpRequestsPage />} />
+        <Route path="posts">
+          <Route index element={<PostListPage />} />
+          <Route path="new" element={<PostCreatePage />} />
+          <Route path=":id" element={<PostDetailPage />} />
+          <Route path=":id/edit" element={<PostEditPage />} />
+        </Route>
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   )
 }
 
