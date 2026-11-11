@@ -1,0 +1,450 @@
+:root {
+  font-family: 'Segoe UI', sans-serif;
+  color: #17243b;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-width: 360px;
+  min-height: 100vh;
+  margin: 0;
+  background: #f5f7fb;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 max(calc((100vw - 1200px) / 2), 28px);
+  border-bottom: 1px solid #e8ecf3;
+  background: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #16233c;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #6246e5;
+  color: #fff;
+  font-size: 17px;
+}
+
+.brand-light {
+  color: #765fe8;
+}
+
+.topbar-caption {
+  color: #748098;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.topbar-caption span,
+.page-footer span {
+  padding: 0 5px;
+  color: #b7bfd0;
+}
+
+.workspace {
+  max-width: 1200px;
+  padding-top: 40px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 156px;
+  margin-bottom: 25px;
+  padding: 28px 36px;
+  overflow: hidden;
+  border-radius: 17px;
+  background: linear-gradient(110deg, #21164c, #4933a5 60%, #755be2);
+  color: #fff;
+}
+
+.hero .eyebrow {
+  color: #c9c0ff;
+}
+
+.eyebrow {
+  color: #7965dc;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.hero h1 {
+  margin: 7px 0 5px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: clamp(22px, 3vw, 29px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.hero p {
+  margin: 0;
+  color: #d7d2ef;
+  font-size: 13px;
+}
+
+.hero-stats {
+  width: 125px;
+  height: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff36;
+  border-radius: 14px;
+  background: #ffffff10;
+}
+
+.hero-stats strong {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.hero-stats span {
+  margin-top: 5px;
+  color: #dbd6f1;
+  font-size: 11px;
+}
+
+.lesson-layout {
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.lesson-nav,
+.lesson-panel {
+  border: 1px solid #e9edf4;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 24px #26385d08;
+}
+
+.lesson-nav {
+  padding: 18px 12px 12px;
+}
+
+.nav-heading {
+  margin: 0 0 10px 9px;
+  color: #a0a9ba;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.lesson-link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 3px 0;
+  padding: 10px 9px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #6d7890;
+  text-align: left;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.lesson-link:hover {
+  background: #f7f6fe;
+}
+
+.lesson-link.active {
+  background: #f0edff;
+  color: #4936b5;
+}
+
+.lesson-number {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  flex: 0 0 30px;
+  place-items: center;
+  border: 1px solid #e8ebf2;
+  border-radius: 8px;
+  background: #fff;
+  color: #8d97aa;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.active .lesson-number {
+  border-color: #ddd6ff;
+  background: #fff;
+  color: #604bd0;
+}
+
+.lesson-link-copy {
+  min-width: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.lesson-link-copy strong {
+  color: #303c54;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.active .lesson-link-copy strong {
+  color: #4936b5;
+}
+
+.lesson-link-copy small {
+  color: #9aa3b3;
+  font-size: 10px;
+}
+
+.lesson-arrow {
+  color: #aaa4d8;
+  font-size: 19px;
+  line-height: 1;
+}
+
+.devtools-note {
+  display: flex;
+  gap: 8px;
+  margin: 18px 4px 2px;
+  padding: 11px 9px;
+  border-radius: 8px;
+  background: #f8f9fc;
+  color: #8a94a8;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.devtools-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: #43b98e;
+}
+
+.lesson-panel {
+  min-width: 0;
+  min-height: 520px;
+  padding: 24px;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.panel-heading h2 {
+  margin: 4px 0 0;
+  color: #202c43;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.topic-pill {
+  padding: 6px 10px;
+  border: 1px solid #e7e2ff;
+  border-radius: 30px;
+  background: #faf9ff;
+  color: #6c58d1;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.page-footer {
+  padding: 22px 0 28px;
+  color: #9ba4b5;
+  font-size: 11px;
+  text-align: center;
+}
+
+.lesson-content {
+  color: #354158;
+}
+
+.lesson-content .card {
+  border-color: #edf0f5;
+  border-radius: 11px;
+}
+
+.section-label {
+  margin-bottom: 10px;
+  color: #8993a6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.counter-value {
+  color: #29204f;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: clamp(44px, 9vw, 72px);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.lesson-content .btn-primary {
+  border-color: #6246e5;
+  background: #6246e5;
+}
+
+.lesson-content .btn-primary:hover {
+  border-color: #4f37c5;
+  background: #4f37c5;
+}
+
+.student-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+}
+
+.student-toolbar .form-control {
+  max-width: 250px;
+}
+
+.student-toolbar .form-select {
+  max-width: 175px;
+}
+
+.student-table {
+  font-size: 12px;
+}
+
+.student-table th {
+  white-space: nowrap;
+}
+
+.student-table td {
+  vertical-align: middle;
+}
+
+.product-image {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  background: #f2f1f8;
+}
+
+.cart-table {
+  font-size: 12px;
+}
+
+.todo-text {
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.todo-text.completed {
+  color: #9aa3b3;
+  text-decoration: line-through;
+}
+
+.user-posts {
+  max-height: 530px;
+  overflow-y: auto;
+}
+
+@media (max-width: 767px) {
+  .topbar {
+    height: 60px;
+    padding: 0 18px;
+  }
+
+  .workspace {
+    padding-top: 20px;
+  }
+
+  .hero {
+    min-height: 145px;
+    padding: 22px;
+  }
+
+  .hero-stats {
+    width: 82px;
+    height: 75px;
+    margin-left: 12px;
+  }
+
+  .hero-stats strong {
+    font-size: 25px;
+  }
+
+  .hero-stats span {
+    font-size: 9px;
+  }
+
+  .lesson-layout {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .lesson-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+  }
+
+  .nav-heading,
+  .devtools-note {
+    grid-column: 1 / -1;
+  }
+
+  .lesson-link {
+    padding: 8px 6px;
+  }
+
+  .lesson-link-copy small {
+    font-size: 9px;
+  }
+
+  .lesson-panel {
+    min-height: 400px;
+    padding: 18px;
+  }
+}
